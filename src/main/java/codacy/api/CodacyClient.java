@@ -68,8 +68,8 @@ public class CodacyClient {
             try {
                 CodacyError errorMsg = gson.fromJson(response, CodacyError.class);
                 throw new CodacyGenericException(errorMsg.getError());
-            } catch (Exception innerEx) {
-                throw new CodacyGenericException(innerEx);
+            } catch(Exception innerEx) {
+                throw new CodacyGenericException(e);
             }
         }
     }

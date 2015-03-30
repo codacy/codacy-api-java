@@ -9,14 +9,14 @@ import static org.junit.Assert.assertTrue;
 
 public class CommitServiceTest {
 
-    String apiToken = "A6gRmVsgbTZb1aY8HcGX";
-    String username = "nmat";
+    String apiToken = "";
+    String username = "Codacy";
     String projectName = "JS-Tests";
     String commitUUID = "010a382bb436a089659d351aff061cc66205ead7";
 
     @Test
     public void testGetCommit() throws Exception {
-        CodacyClient client = new CodacyClient(this.apiToken, "http", "localhost", 9000);
+        CodacyClient client = new CodacyClient(this.apiToken);
         CommitService service = new CommitService(client);
 
         Commit commit = service.getCommit(username, projectName, commitUUID);
