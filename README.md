@@ -1,5 +1,7 @@
 # Codacy API wrapper
 
+[![Build Status](https://travis-ci.org/codacy/codacy-api-java.svg)](https://travis-ci.org/codacy/codacy-api-java)
+
 Java wrapper for the Codacy API. 
 
 Example usage:
