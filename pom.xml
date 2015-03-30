@@ -5,7 +5,7 @@
     <groupId>com.codacy</groupId>
     <artifactId>codacy-api-java</artifactId>
     <name>codacy-api-java</name>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Codacy Java API wrapper</description>
     <url>https://github.com/codacy/codacy-api-java</url>
@@ -18,8 +18,8 @@
     </licenses>
     <scm>
         <url>https://github.com/codacy/codacy-api-java</url>
-        <connection>scm:git:https://github.com/codacy/codacy-api-java.git</connection>
-        <developerConnection>scm:git:https://github.com/codacy/codacy-api-java.git</developerConnection>
+        <connection>scm:git:git@github.com:codacy/codacy-api-java.git</connection>
+        <developerConnection>scm:git:git@github.com:codacy/codacy-api-java.git</developerConnection>
       <tag>codacy-api-java-1.0</tag>
   </scm>
 

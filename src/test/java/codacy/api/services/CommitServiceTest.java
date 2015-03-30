@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 public class CommitServiceTest {
 
-    String apiToken = "";
+    String apiToken = System.getenv("CODACY_API_TOKEN");
     String username = "Codacy";
     String projectName = "JS-Tests";
     String commitUUID = "010a382bb436a089659d351aff061cc66205ead7";
