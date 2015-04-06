@@ -1,10 +1,12 @@
 package codacy.api.model;
 
-public class Commit {
+import java.util.List;
+
+abstract class Commit {
 
     private String uuid;
     private String state;
-    private CommitDelta delta;
+    private List<CommitUrl> urls;
 
     public String getUuid() {
         return uuid;
@@ -14,8 +16,7 @@ public class Commit {
         return state;
     }
 
-    public CommitDelta getDelta() {
-        return delta;
+    public List<CommitUrl> getUrls() {
+        return urls;
     }
-
 }

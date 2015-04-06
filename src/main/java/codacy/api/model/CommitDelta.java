@@ -3,30 +3,41 @@ package codacy.api.model;
 
 import java.util.ArrayList;
 
-public class CommitDelta {
+public class CommitDelta extends Commit {
 
-    private String newIssues;
-    private String fixedIssues;
-    private String complexity;
-    private String nrClones;
-    private ArrayList<FileDelta> files;
+    private CommitDeltaData delta;
 
-    public String getNewIssues() {
-        return newIssues;
+    public CommitDeltaData getDelta() {
+        return delta;
     }
 
-    public String getFixedIssues() {
-        return fixedIssues;
-    }
-    public String getComplexity() {
-        return complexity;
-    }
+    public class CommitDeltaData {
 
-    public String getNrClones() {
-        return nrClones;
-    }
 
-    public ArrayList<FileDelta> getFiles() {
-        return files;
+        private String newIssues;
+        private String fixedIssues;
+        private String complexity;
+        private String nrClones;
+        private ArrayList<FileDelta> files;
+
+        public String getNewIssues() {
+            return newIssues;
+        }
+
+        public String getFixedIssues() {
+            return fixedIssues;
+        }
+
+        public String getComplexity() {
+            return complexity;
+        }
+
+        public String getNrClones() {
+            return nrClones;
+        }
+
+        public ArrayList<FileDelta> getFiles() {
+            return files;
+        }
     }
 }

@@ -10,5 +10,8 @@ public class Endpoints {
         return API + "/" + username + "/" + projectName + "/commit/" + commitUUID;
     }
 
+    public static String commitDelta(String username, String projectName, String commitUUID) {
+        return API + "/" + username + "/" + projectName + "/commit/" + commitUUID + "/delta";
+    }
 
 }
