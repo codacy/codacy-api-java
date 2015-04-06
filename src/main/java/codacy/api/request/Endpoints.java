@@ -14,4 +14,7 @@ public class Endpoints {
         return API + "/" + username + "/" + projectName + "/commit/" + commitUUID + "/delta";
     }
 
+    public static String projectCheckForUpdates(String username, String projectName) {
+        return API + "/" + username + "/" + projectName + "/update";
+    }
 }
