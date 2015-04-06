@@ -14,7 +14,8 @@ public class CommitOverview extends Commit {
         private Integer nrIssues;
         private String grade;
         private Integer complexity;
-        private Integer duplicatedLines;
+        private Integer nrDuplicateLines;
+        private Integer coverage;
 
         public Integer getNrIssues() {
             return nrIssues;
@@ -27,9 +28,12 @@ public class CommitOverview extends Commit {
         public Integer getComplexity() {
             return complexity;
         }
+        public Integer getCoverage() {
+            return coverage;
+        }
 
-        public Integer getDuplicatedLines() {
-            return duplicatedLines;
+        public Integer getDuplicateLines() {
+            return nrDuplicateLines;
         }
 
 

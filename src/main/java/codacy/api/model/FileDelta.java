@@ -4,28 +4,33 @@ package codacy.api.model;
 public class FileDelta {
 
     private String path;
-    private String newIssues;
-    private String fixedIssues;
-    private String complexity;
-    private String nrClones;
+    private Integer newIssues;
+    private Integer fixedIssues;
+    private Integer complexity;
+    private Integer coverage;
+    private Integer nrClones;
 
     public String getPath() {
         return path;
     }
 
-    public String getNewIssues() {
+    public Integer getNewIssues() {
         return newIssues;
     }
 
-    public String getFixedIssues() {
+    public Integer getFixedIssues() {
         return fixedIssues;
     }
 
-    public String getComplexity() {
+    public Integer getComplexity() {
         return complexity;
     }
 
-    public String getNrClones() {
+    public Integer getNrClones() {
         return nrClones;
+    }
+
+    public Integer getCoverage() {
+        return coverage;
     }
 }

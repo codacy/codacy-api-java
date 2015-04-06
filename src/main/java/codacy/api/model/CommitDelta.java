@@ -18,6 +18,7 @@ public class CommitDelta extends Commit {
         private Integer fixedIssues;
         private Integer complexity;
         private Integer nrClones;
+        private Integer coverage;
         private ArrayList<FileDelta> files;
 
         public Integer getNewIssues() {
@@ -34,6 +35,9 @@ public class CommitDelta extends Commit {
 
         public Integer getNrClones() {
             return nrClones;
+        }
+        public Integer getCoverage() {
+            return coverage;
         }
 
         public ArrayList<FileDelta> getFiles() {

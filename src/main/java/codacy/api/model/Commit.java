@@ -4,12 +4,12 @@ import java.util.List;
 
 abstract class Commit {
 
-    private String uuid;
+    private String sha;
     private String state;
     private List<CommitUrl> urls;
 
-    public String getUuid() {
-        return uuid;
+    public String getSha() {
+        return sha;
     }
 
     public String getState() {
