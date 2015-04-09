@@ -1,5 +1,6 @@
 package codacy.api.request;
 
+import codacy.api.error.CodacyGenericException;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
@@ -66,7 +67,12 @@ public class ApiRequest {
             }
 
             StringWriter writer = new StringWriter();
-            IOUtils.copy(conn.getInputStream(), writer, "UTF-8");
+            if(conn.getResponseCode() == 200) {
+                IOUtils.copy(conn.getInputStream(), writer, "UTF-8");
+            } else {
+                IOUtils.copy(conn.getErrorStream(), writer, "UTF-8");
+                throw new IOException(writer.toString());
+            }
 
             return writer.toString();
 
