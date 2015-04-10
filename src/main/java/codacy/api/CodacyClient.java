@@ -53,24 +53,28 @@ public class CodacyClient {
                                 Class<T> responseType, HashMap<String, String> parameters) throws CodacyGenericException {
         parameters.put(Endpoints.API_TOKEN, this.apiToken);
         String response = null;
-
-        try {
-            response = this.client.request(requestType, endpoint, parameters);
-        } catch (Exception e) {
-            throw new CodacyGenericException(e);
-        }
-
         Gson gson = new Gson();
 
         try {
+            response = this.client.request(requestType, endpoint, parameters);
             return gson.fromJson(response, responseType);
         } catch (Exception e) {
-            try {
-                CodacyError errorMsg = gson.fromJson(response, CodacyError.class);
-                throw new CodacyGenericException(errorMsg.getError());
-            } catch(Exception innerEx) {
-                throw new CodacyGenericException(e);
-            }
+            throw handleException(response, e);
+        }
+    }
+
+    private CodacyGenericException handleException(String message, Exception e) {
+        Gson gson = new Gson();
+        String msg = message;
+        if (message == null || message.isEmpty()) {
+            msg = e.getMessage();
+        }
+
+        try {
+            CodacyError errorMsg = gson.fromJson(msg, CodacyError.class);
+            return new CodacyGenericException(errorMsg.getError());
+        } catch (Exception innerEx) {
+            return new CodacyGenericException(e.getMessage(), e);
         }
     }
 }

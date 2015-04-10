@@ -6,7 +6,7 @@ public class CodacyGenericException extends Exception {
         super(message);
     }
 
-    public CodacyGenericException(Throwable cause) {
-        super(cause);
+    public CodacyGenericException(String message, Throwable cause) {
+        super(message, cause);
     }
 }
