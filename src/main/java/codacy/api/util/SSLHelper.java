@@ -14,7 +14,7 @@ import java.util.Collection;
 
 public class SSLHelper {
 
-    public static void loadCerts() throws KeyStoreException, CertificateException, NoSuchAlgorithmException, KeyManagementException, IOException, URISyntaxException {
+    public static SSLSocketFactory getSSLFactory() throws KeyStoreException, CertificateException, NoSuchAlgorithmException, KeyManagementException, IOException, URISyntaxException {
         ClassLoader classLoader = SSLHelper.class.getClassLoader();
         final CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
         final Collection<? extends Certificate> certs = certFactory.generateCertificates(classLoader.getResourceAsStream("startssl.pem"));
@@ -38,7 +38,6 @@ public class SSLHelper {
         SSLContext context = SSLContext.getInstance("TLS");
         context.init(null, trustManager, new java.security.SecureRandom());
 
-        SSLSocketFactory sslFactory = context.getSocketFactory();
-        HttpsURLConnection.setDefaultSSLSocketFactory(sslFactory);
+        return context.getSocketFactory();
     }
 }

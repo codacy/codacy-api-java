@@ -14,13 +14,6 @@ public class CodacyClient {
     private ApiRequest client = null;
     private String apiToken = null;
 
-    static {
-        try {
-            SSLHelper.loadCerts();
-        } catch (Exception e) {
-        }
-    }
-
     public CodacyClient(String apiToken) {
         this(apiToken, "https", "www.codacy.com", 443);
     }

@@ -1,17 +1,22 @@
 package codacy.api.request;
 
-import codacy.api.error.CodacyGenericException;
+import codacy.api.util.SSLHelper;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
 
 import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLSocketFactory;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +37,9 @@ public class ApiRequest {
 
     public String request(final String requestType,
                           final String endpoint,
-                          final HashMap<String, String> parameters) throws URISyntaxException, IOException {
+                          final HashMap<String, String> parameters)
+            throws KeyStoreException, CertificateException, NoSuchAlgorithmException, KeyManagementException, IOException, URISyntaxException {
+
         HttpURLConnection conn = null;
 
         try {
@@ -52,8 +59,10 @@ public class ApiRequest {
                     .build();
 
 
-            if (requestType.equals("https")) {
+            if (this.scheme.equals("https")) {
+                SSLSocketFactory factory = SSLHelper.getSSLFactory();
                 HttpsURLConnection httpsConn = (HttpsURLConnection) uri.toURL().openConnection();
+                httpsConn.setSSLSocketFactory(factory);
                 httpsConn.setRequestMethod(requestType);
                 httpsConn.setDoInput(true);
                 httpsConn.connect();
