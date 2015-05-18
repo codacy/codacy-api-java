@@ -14,7 +14,16 @@ import java.util.Collection;
 
 public class SSLHelper {
 
+    private static SSLSocketFactory factory = null;
+
     public static SSLSocketFactory getSSLFactory() throws KeyStoreException, CertificateException, NoSuchAlgorithmException, KeyManagementException, IOException, URISyntaxException {
+        if(factory == null) {
+            factory = createSSLFactory();
+        }
+        return factory;
+    }
+
+    private static SSLSocketFactory createSSLFactory() throws KeyStoreException, CertificateException, NoSuchAlgorithmException, KeyManagementException, IOException, URISyntaxException {
         ClassLoader classLoader = SSLHelper.class.getClassLoader();
         final CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
         final Collection<? extends Certificate> certs = certFactory.generateCertificates(classLoader.getResourceAsStream("startssl.pem"));
