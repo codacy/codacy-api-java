@@ -15,7 +15,7 @@ public class CodacyClient {
     private String apiToken = null;
 
     public CodacyClient(String apiToken) {
-        this(apiToken, "https", "www.codacy.com", 443);
+        this(apiToken, "https", "api.codacy.com", 443);
     }
 
     public CodacyClient(String apiToken, String scheme, String url, int port) {
