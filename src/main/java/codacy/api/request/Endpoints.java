@@ -2,7 +2,7 @@ package codacy.api.request;
 
 public class Endpoints {
 
-    public final static String API = "/api/2.0";
+    public final static String API = "/2.0";
 
     public final static String API_TOKEN = "api_token";
 
