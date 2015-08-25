@@ -65,12 +65,14 @@ public class ApiRequest {
                 httpsConn.setSSLSocketFactory(factory);
                 httpsConn.setRequestMethod(requestType);
                 httpsConn.setDoInput(true);
+                httpsConn.setInstanceFollowRedirects(true);
                 httpsConn.connect();
                 conn = httpsConn;
             } else {
                 HttpURLConnection httpConn = (HttpURLConnection) uri.toURL().openConnection();
                 httpConn.setRequestMethod(requestType);
                 httpConn.setDoInput(true);
+                httpConn.setInstanceFollowRedirects(true);
                 httpConn.connect();
                 conn = httpConn;
             }
