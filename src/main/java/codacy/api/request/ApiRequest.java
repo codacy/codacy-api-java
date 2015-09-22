@@ -1,13 +1,11 @@
 package codacy.api.request;
 
-import codacy.api.util.SSLHelper;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.message.BasicNameValuePair;
 
 import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLSocketFactory;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
@@ -76,7 +74,7 @@ public class ApiRequest {
             }
 
             StringWriter writer = new StringWriter();
-            if(conn.getResponseCode() == 200) {
+            if (conn.getResponseCode() == 200) {
                 IOUtils.copy(conn.getInputStream(), writer, "UTF-8");
             } else {
                 IOUtils.copy(conn.getErrorStream(), writer, "UTF-8");
