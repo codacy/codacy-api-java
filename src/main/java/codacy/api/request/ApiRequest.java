@@ -60,9 +60,7 @@ public class ApiRequest {
 
 
             if (this.scheme.equals("https")) {
-                SSLSocketFactory factory = SSLHelper.getSSLFactory();
                 HttpsURLConnection httpsConn = (HttpsURLConnection) uri.toURL().openConnection();
-                httpsConn.setSSLSocketFactory(factory);
                 httpsConn.setRequestMethod(requestType);
                 httpsConn.setDoInput(true);
                 httpsConn.setInstanceFollowRedirects(true);
