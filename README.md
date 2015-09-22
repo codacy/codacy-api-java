@@ -1,6 +1,6 @@
 # Codacy API wrapper
 
-[![Build Status](https://travis-ci.org/codacy/codacy-api-java.svg)](https://travis-ci.org/codacy/codacy-api-java)
+[![Build Status](https://circleci.com/gh/codacy/codacy-api-java.png?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-api-java)
 
 Java wrapper for the Codacy API. 
 
