@@ -4,7 +4,6 @@ import codacy.api.error.CodacyError;
 import codacy.api.error.CodacyGenericException;
 import codacy.api.request.ApiRequest;
 import codacy.api.request.Endpoints;
-import codacy.api.util.SSLHelper;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
