@@ -1,5 +1,7 @@
 # Codacy API wrapper
 
+[![Join the chat at https://gitter.im/codacy/codacy-api-java](https://badges.gitter.im/codacy/codacy-api-java.svg)](https://gitter.im/codacy/codacy-api-java?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://circleci.com/gh/codacy/codacy-api-java.png?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-api-java)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/82432b7685cc4d0e8f53109dff10a3a2)](https://www.codacy.com/app/Codacy/codacy-api-java)
 [![Codacy Badge](https://api.codacy.com/project/badge/coverage/82432b7685cc4d0e8f53109dff10a3a2)](https://www.codacy.com/app/Codacy/codacy-api-java)
