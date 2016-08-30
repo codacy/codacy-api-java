@@ -13,7 +13,6 @@ public class CommitDelta extends Commit {
 
     public class CommitDeltaData {
 
-
         private Integer newIssues;
         private Integer fixedIssues;
         private Integer complexity;
