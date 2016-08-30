@@ -21,7 +21,7 @@ public class CommitServiceTest {
 
         assertNotNull(commit);
         assertNotNull(commit.getCommit());
-        assertEquals(commit.getCommit().getGrade(), "D");
+        assertEquals(commit.getCommit().getGrade(), "C");
     }
 
     @Test
