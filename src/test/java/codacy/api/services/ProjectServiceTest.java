@@ -1,12 +1,7 @@
 package codacy.api.services;
 
 import codacy.api.CodacyClient;
-import codacy.api.error.CodacySuccess;
-import codacy.api.model.CommitDelta;
-import codacy.api.model.CommitOverview;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ProjectServiceTest {
 
