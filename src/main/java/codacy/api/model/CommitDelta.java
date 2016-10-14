@@ -35,6 +35,7 @@ public class CommitDelta extends Commit {
         public Integer getNrClones() {
             return nrClones;
         }
+
         public Integer getCoverage() {
             return coverage;
         }
