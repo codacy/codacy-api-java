@@ -28,6 +28,7 @@ public class CommitOverview extends Commit {
         public Integer getComplexity() {
             return complexity;
         }
+
         public Integer getCoverage() {
             return coverage;
         }
