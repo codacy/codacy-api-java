@@ -4,7 +4,5 @@ machine:
 test:
   post:
     - mvn jacoco:report
-    - curl http://www.jpm4j.org/install/script > jpmInstall.sh
-    - sudo sh jpmInstall.sh
-    - sudo jpm install com.codacy:codacy-coverage-reporter:assembly
-    - codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml
+    - wget https://github.com/codacy/codacy-coverage-reporter/releases/download/1.0.13/codacy-coverage-reporter-1.0.13-assembly.jar -O codacy-coverage-reporter-assembly.jar
+    - java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r target/site/jacoco/jacoco.xml

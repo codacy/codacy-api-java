@@ -1,8 +1,8 @@
 # Codacy API wrapper
 
 [![Build Status](https://circleci.com/gh/codacy/codacy-api-java.png?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-api-java)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/82432b7685cc4d0e8f53109dff10a3a2)](https://www.codacy.com/app/Codacy/codacy-api-java)
-[![Codacy Badge](https://api.codacy.com/project/badge/coverage/82432b7685cc4d0e8f53109dff10a3a2)](https://www.codacy.com/app/Codacy/codacy-api-java)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc74ba1c0eaa44febf03cac01cbb8065)](https://www.codacy.com/app/Codacy/codacy-api-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-api-java&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/dc74ba1c0eaa44febf03cac01cbb8065)](https://www.codacy.com/app/Codacy/codacy-api-java?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-api-java&utm_campaign=Badge_Coverage)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.codacy/codacy-api-java/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.codacy/codacy-api-java)
 
 Java wrapper for the Codacy API.
