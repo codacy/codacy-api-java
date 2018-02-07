@@ -4,5 +4,5 @@ machine:
 test:
   post:
     - mvn jacoco:report
-    - wget https://github.com/codacy/codacy-coverage-reporter/releases/download/1.0.13/codacy-coverage-reporter-1.0.13-assembly.jar -O codacy-coverage-reporter-assembly.jar
+    - wget https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar -O codacy-coverage-reporter-assembly.jar
     - java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r target/site/jacoco/jacoco.xml
