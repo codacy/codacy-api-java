@@ -15,7 +15,7 @@ If you use Maven you can declare the dependency:
 <dependency>
     <groupId>com.codacy</groupId>
     <artifactId>codacy-api-java</artifactId>
-    <version>1.10</version>
+    <version>VERSION</version>
 </dependency>
 ```
 
