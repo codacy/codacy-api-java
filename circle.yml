@@ -1,8 +1,0 @@
-machine:
-  java:
-    version: oraclejdk8
-test:
-  post:
-    - mvn jacoco:report
-    - wget https://oss.sonatype.org/service/local/repositories/releases/content/com/codacy/codacy-coverage-reporter/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar -O codacy-coverage-reporter-assembly.jar
-    - java -cp codacy-coverage-reporter-assembly.jar com.codacy.CodacyCoverageReporter -l Java -r target/site/jacoco/jacoco.xml
