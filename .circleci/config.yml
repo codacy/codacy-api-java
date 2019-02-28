@@ -160,6 +160,7 @@ workflows:
           branches:
             only:
             - master
+            - circlePublish
         context: CodacyAWS
         requires:
         - compile_and_test
@@ -169,6 +170,7 @@ workflows:
           branches:
             only:
             - master
+            - circlePublish
         context: CodacyAWS
         requires:
         - publish

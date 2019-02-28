@@ -71,3 +71,4 @@ buildNumber.properties
 .settings
 .vscode
 target
+bin
