@@ -38,6 +38,15 @@ references:
 
 jobs:
 
+  trigger_test:
+    <<: *default_sbt_job
+    steps:
+      - checkout
+      - *restore_sbt_cache
+      - run:
+          name: Test
+          command: sbt test
+
   checkout_and_version:
     docker:
       - image: codacy/git-version:latest
