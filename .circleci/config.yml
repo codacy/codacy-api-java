@@ -34,6 +34,7 @@ workflows:
           - codacy/checkout_and_version
     - codacy/sbt:
         name: publish
+        context: CodacyAWS
         cmd: |
           sbt ";clean;retrieveGPGKeys"
           sbt ";+publishSigned;sonatypeReleaseAll"
