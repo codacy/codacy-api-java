@@ -76,7 +76,6 @@ jobs:
       - run:
           name: Check formatting
           command: sbt ";scalafmt::test;test:scalafmt::test;sbt:scalafmt::test"
-      - *clean_sbt_cache
       - *save_sbt_cache
 
   populate_cache:
@@ -100,7 +99,6 @@ jobs:
       - run:
           name: Compile
           command: sbt ";clean ;compile; test"
-      - *clean_sbt_cache
       - *save_sbt_cache
 
   coverage:
@@ -115,7 +113,6 @@ jobs:
             sbt jacoco
             wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets[0].browser_download_url')
             java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/jacoco/report/jacoco.xml
-      - *clean_sbt_cache
       - *save_sbt_cache
 
   publish:
