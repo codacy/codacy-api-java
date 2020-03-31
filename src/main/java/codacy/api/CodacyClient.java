@@ -44,6 +44,9 @@ public class CodacyClient {
     public <T> T genericRequest(String requestType, String endpoint,
                                 Class<T> responseType, HashMap<String, String> parameters) throws CodacyGenericException {
         parameters.put(Endpoints.API_TOKEN, this.apiToken);
+        // This is deprecated and is kept for backward compatibility. It will be
+        // removed in the context of CY-1272
+        parameters.put(Endpoints.LEGACY_API_TOKEN, this.apiToken);
         String response = null;
         Gson gson = new Gson();
 
