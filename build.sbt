@@ -22,7 +22,7 @@ libraryDependencies ++= Seq(
   "com.google.code.gson" % "gson" % "2.3.1",
   "commons-io" % "commons-io" % "2.4",
   "junit" % "junit" % "4.11" % Test,
-  "com.novocode" % "junit-interface" % "0.11" % Test
+  "com.github.sbt" % "junit-interface" % "0.13.3" % Test
 )
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
