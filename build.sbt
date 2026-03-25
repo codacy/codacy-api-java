@@ -21,7 +21,7 @@ libraryDependencies ++= Seq(
   "org.apache.httpcomponents" % "httpclient" % "4.4",
   "com.google.code.gson" % "gson" % "2.3.1",
   "commons-io" % "commons-io" % "2.4",
-  "junit" % "junit" % "4.11" % Test,
+  "junit" % "junit" % "4.13.2" % Test,
   "com.novocode" % "junit-interface" % "0.11" % Test
 )
 
