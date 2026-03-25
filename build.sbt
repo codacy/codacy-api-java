@@ -18,7 +18,7 @@ pgpPassphrase := Option(System.getenv("SONATYPE_GPG_PASSPHRASE")).map(_.toCharAr
 resolvers ~= { _.filterNot(_.name.toLowerCase.contains("codacy")) }
 
 libraryDependencies ++= Seq(
-  "org.apache.httpcomponents" % "httpclient" % "4.4",
+  "org.apache.httpcomponents" % "httpclient" % "4.5.14",
   "com.google.code.gson" % "gson" % "2.3.1",
   "commons-io" % "commons-io" % "2.4",
   "junit" % "junit" % "4.11" % Test,
